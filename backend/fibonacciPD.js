@@ -12,7 +12,6 @@ function fibonacciDP(num) {
     }
 
     var res = fibonacciDP(num - 1) + fibonacciDP(num - 2);
-    console.log(res);
 
     v[num] = res;
     return res;

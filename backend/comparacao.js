@@ -19,7 +19,6 @@ function tempoDecorrido(funcao) {
     
    var tempo = (fim-inicio).toFixed(6);
 
-//    console.log(inicio,fim,tempo);
    
    return [tempo, value];
 }
@@ -38,4 +37,6 @@ function comparacao (input){
         resultado: resultFR
     }
 }
+
+
 module.exports = comparacao;

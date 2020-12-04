@@ -19,20 +19,31 @@
         </div>
         <div class="col-12 text-left pt-3">
             <label> Entrada</label>
-            <input type="number" min="0" max="50" class="form-control" id="input" style="text-align: center" />
+            <input type="number" min="0" max="50" class="form-control " id="input" style="text-align: center" />
+            <div class="invalid-feedback">
+                Insira um nome menor que 46 e maior que 0.
+              </div>
         </div>
         
 
         <div class="col-3  offset-1">
-            <button type="button" class="btn btn-secondary btn-md btn-block" id="submit_button">Calcular</button>
+            <button type="button" class="btn btn-secondary btn-md btn-block" id="submit_button">
+                <span id='isloading' class="d-none" >
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...</span>
+                <span id='calc'>Calcular</span>
+                </button>
+              
+              </button>
         </div>
+        
         <div class="col-3  offset-3">
             <button type="button" class="btn btn-secondary btn-md btn-block" id="reset_button">Limpar</button>
         </div>
         <hr>
 
         <div class="col-3 text-center pt-3">
-            <label>Tempo(ms) Recursivo</label>
+            <label>Tempo Recursivo</label>
             <input min="0" class="form-control" disabled="disabled" id="recursive_result"
                 style="text-align: center"/>
         </div>
@@ -43,7 +54,7 @@
         </div>
        
         <div class="col-4 text-center pt-3">
-            <label>Tempo(ms) com programação dinâmica</label>
+            <label>Tempo com programação dinâmica</label>
             <input min="0" class="form-control" disabled="disabled" id="dynamic_result"
                 style="text-align: center"/>
         </div>
