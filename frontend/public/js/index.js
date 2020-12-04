@@ -1,35 +1,34 @@
-var submit_button = document.querySelector("#submit_button");
-var reset_button = document.querySelector("#reset_button");
-var numbers = document.querySelector("#numbers");
+
+var input_field = document.querySelector("#input");
 
 submit_button.addEventListener("click", (e) => {
-    arrayNum = numbers.value.split(' ').split(',');
-
+    input = input_field.value;
+    console.log(input)
     e.preventDefault();
-    fetch('http://localhost:3000/imparpar', {
+    fetch('http://localhost:3000/perfomance', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ data: {arrayNum} })
+        body: JSON.stringify({ data: {input: input} })
     }).then((data) => {
         console.log(data)
         return data.json()
     }).then((data) => {
         console.log(data)
-        result = ''
-        data.forEach(element => {
-           result += ' ' + element;
-        });
-            document.querySelector("#result").value = result
+            document.querySelector("#recursive_result").value = data['recursivo'] 
+            document.querySelector("#dynamic_result").value = data['dinamico']
+            document.querySelector("#result").value = data['resultado']
         })
 })
+
 reset_button.addEventListener("click", (e) => {
 
-    arrayNum = numbers.value.split(' ');
+    input_field.value.split(' ');
 
     e.preventDefault();
 
-    document.querySelector("#numbers").value = null  
+    document.querySelector("#recursive_result").value = null  
+    document.querySelector("#dynamic_result").value = null
     document.querySelector("#result").value = null
 })

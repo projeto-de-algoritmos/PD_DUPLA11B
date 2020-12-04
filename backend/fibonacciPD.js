@@ -1,18 +1,21 @@
-v[200000];
+var v = Array(200000).fill(-1);
 
-function fibonacciDP(num){
+function fibonacciDP(num) {
+   
 
-    if(num == 0 || num == 1){
+    if (num == 0 || num == 1) {
         return num;
     }
 
-    if(v[num] != -1){
+    if (v[num] != -1) {
         return v[num];
     }
 
-    res = fibonacciDP(num - 1) + fibonacciDP(num - 2);
+    var res = fibonacciDP(num - 1) + fibonacciDP(num - 2);
+    console.log(res);
 
     v[num] = res;
     return res;
-
 }
+
+module.exports = fibonacciDP;
