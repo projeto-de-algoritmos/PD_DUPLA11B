@@ -80,6 +80,9 @@ Para evitar grandes demoras, limitamos a entrada a 46:
 
 <img src="./Media/img04.png">
 
+## Apresentação
+- O Video de apresentação está na pasta "Media" desse repositório
+
 ## Instalação 
 
 **Linguagem**: Javascript
