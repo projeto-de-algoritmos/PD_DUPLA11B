@@ -59,7 +59,26 @@ int fibPD(int n){
 A ideia é simplesmente armazenar os resultados dos subproblemas, para que não tenhamos que recalculá-los quando for necessário posteriormente. Essa otimização simples reduz as complexidades de tempo de exponencial para polinomial. Uma análise cuidadosa mostra que a complexidade computacional do algoritmo cai para O(n). 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+Tela principal da aplicação:
+
+<img src="./Media/img02.png">
+
+Cálculo feito para encontrar o 20 elemento da sequência, com os tempos que cada implementação teve:
+
+<img src="./Media/img03.png">
+
+Quando inserido valores mais altos, é necessário esperar que o cálculo seja feito. Para que não pareça que a aplicação está travada, há uma mensagem de "loading" no botão de "Calcular":
+
+<img src="./Media/img05.png">
+
+Mais um resultado com valor alto. Note a diferença entre os tempos:
+
+<img src="./Media/img01.png">
+
+Para evitar grandes demoras, limitamos a entrada a 46:
+
+<img src="./Media/img04.png">
 
 ## Instalação 
 
